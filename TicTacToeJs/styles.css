@@ -1,0 +1,55 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #e65c00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: arial;
+}
+/* CONTAINER */
+.container {
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    font-size: 50px;
+    text-align: center;
+    line-height: 95px;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 40px;
+}
+/* CELLS */
+.celda {
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+}
+
+.celda:nth-child(3n) {
+    border-right: none;
+}
+.celda:nth-child(n+7) {
+    border-bottom: none;
+}
+/* THIS IS THE WINNER!*/
+.celda.highligth {
+    background-color: #fff;
+}
+
+/* BUTTON*/
+button {
+    background: none;
+    border: 1px solid black;
+    width: 150px;
+    height: 30px;
+}
+button:hover {
+    background-color: white;
+}
